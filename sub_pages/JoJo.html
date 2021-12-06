@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/styles/Normal_carousel.css">
+</head>
+<body onload="showSlides()" style="margin: 0; display: flex">
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        var i;
+        const slides = document.getElementsByClassName("mySlides");
+        const text = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < text.length; i++) {
+            text[i].className = text[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        text[slideIndex - 1].className += " active";
+    }
+</script>
+<div class="button_left">
+    <a class="prev" onclick="plusSlides(-1)"><</a>
+</div>
+<div class="content_container">
+    <div class="mySlides fade">
+        <img src="../pics/JoJo/Jotaro_Kujo.png" style="width:100%">
+        <div class="caption_text">
+            <h3>Джотаро Куджо</h3>
+            Главный протагонист третьей части серии Невероятные приключения ДжоДжо,
+            Крестоносцы звёздной пыли, и третий ДжоДжо в серии.
+            <img src="../pics/JoJo/Stardust_Crusaders.jpg" style="width: 100%">
+            <p>Джотаро — наполовину японец. Он хулиган, который жил обычной жизнью,
+                пока не вернулся старый враг семьи Джостар, Дио.
+                Видя, что его мать Холи заболевает из-за Дио,
+                и прислушиваясь к призыву своего деда Джозефа Джостара,
+                Джотаро отправляется в Египет, чтобы спасти свою мать
+                и остановить вампира раз и навсегда.
+
+            <p>Джотаро — первый ДжоДжо, обладающий стендом, невероятно мощным Star Platinum
+                <img src="../pics/JoJo/star_platinum.jpg" style="width: 100%">
+        </div>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="../pics/JoJo/josuke.jpg" style="width:100%">
+        <div class="caption_text">
+            <h3>Джоске Хигашиката</h3>
+            Главный протагонист четвертой части серии Невероятные приключения ДжоДжо, Несокрушимый алмаз, и четвертый
+            ДжоДжо в серии. Он внебрачный сын Джозефа Джостара и Томоко Хигашикаты.
+            <img src="../pics/JoJo/Diamond-is-Unbreakable.jpg" style="width: 100%">
+            <p>Джоске - первокурсник средней школы, проживающий в городе Морио. Вскоре он встречает Джотаро Куджо,
+                который сообщает ему, что он внебрачный сын Джозефа Джостара. После того, как его дедушка умер, Джоске
+                берёт на себя задачу защитить свой любимый город от недоброжелательных пользователей стенда. Джоске
+                обладает Crazy Diamond, мощным Стендом, способным починить почти всё.
+                <img src="../pics/JoJo/crazy_diamond.jpg" style="width: 100%">
+        </div>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="../pics/JoJo/JoJo-Giorno-Giovanna-Shonen-Protagonist-Differences-Trio.jpg" style="width:100%">
+        <div class="caption_text">
+            <h3>Джорно Джованна</h3>
+            Протагонист Золотого ветра и пятый ДжоДжо в серии манги Невероятные приключения ДжоДжо.
+            <img src="../pics/JoJo/jojo-golden-wind-creator-1242598.jpg" style="width: 100%">
+            <p>Как незаконнорожденный сын Дио Брандо, зачатый украденным телом Джонатана Джостара, Джорно Джованна,
+                впервые представленный как Харуно Шиобана - подросток, живущий в Италии. Джорно - это пользователь
+                стенда с естественным происхождением, обладающий могущественным источником жизни Gold Experience в бою.
+                <img src="../pics/JoJo/They_be_staring_to_you..jpg" style="width: 100%">
+        </div>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="../pics/JoJo/jolyne.jpg" style="width:100%">
+        <div class="caption_text">
+            <h3>Джолин Куджо</h3>
+            Является протагонистом шестой части серии Невероятные приключения ДжоДжо, Каменный океан и шестой ДжоДжо в
+            этой серии. Она дочь американки и Джотаро Куджо, протагониста Крестоносцев звёздной пыли.
+            <img src="../pics/JoJo/JoJo_Part_6_Stone_Ocean.jpg" style="width: 100%">
+            <p>Подставленная за убийство в нетрезвом видеW, Джолин отправляется в тюрьму Green Dolphin Street, где она
+                расследует дело и сражается с самым доверенным учеником ДИО, отцом Энрико Пуччи. Во время пребывания в
+                тюрьме, Джолин пробуждает свой стенд - Stone Free, работающего на основе струн.
+                <img src="../pics/JoJo/jojos-bizarre-adventure-stone-ocean-jolyne-stand-stone-free-anim-1278646.jpeg" style="width: 100%">
+        </div>
+    </div>
+
+
+</div>
+<div class="button_right">
+    <a class="next" onclick="plusSlides(1)">></a>
+</div>
+
+
+</body>
+</html>

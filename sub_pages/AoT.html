@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/styles/Normal_carousel.css">
+</head>
+<body onload="showSlides()" style="margin: 0; display: flex">
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        var i;
+        const slides = document.getElementsByClassName("mySlides");
+        const text = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < text.length; i++) {
+            text[i].className = text[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        text[slideIndex - 1].className += " active";
+    }
+</script>
+<div class="button_left">
+    <a class="prev" onclick="plusSlides(-1)"><</a>
+</div>
+<div class="content_container">
+    <div class="mySlides fade">
+        <img src="../pics/AttackOnTitan/Eren_yeager1.jpg" style="width:100%">
+        <div class="caption_text">
+            <h3>Эрен Йегер</h3>
+            Главный герой истории. Являлся членом Разведкорпуса. Единственный сын Гриши и Карлы Йегер, а также приёмный
+            брат Микасы Аккерман, единокровный брат Зика Йегера, друг детства Армина Арлерта. На данный момент Эрен
+            обладатель сил Титана—Прародителя, Титана Молота Войны и Атакующего Титана.
+            <img src="../pics/AttackOnTitan/Eren_yeager2.jpg" style="width: 100%">
+            <p>Родился и вырос в южном районе стены Марии в Шиганшине. Во время атаки Бронированного и Колоссального
+                титанов в 845 году Эрен своими глазами видел, как его мать съел улыбающийся титан. Это событие вызвало у
+                Эрена искреннюю ненависть к титанам и он поклялся уничтожить их всех.
+
+        </div>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="../pics/AttackOnTitan/Mikasa1.jpg" style="width:100%">
+        <div class="caption_text">
+            <h3>Микаса Аккерман</h3>
+            Приёмная сестра Эрена Йегера и лучшая подруга Армина Арлерта. Обладает выдающимися физическими
+            способностями.
+            <img src="../pics/AttackOnTitan/Mikasa2.jpg" style="width: 100%">
+            <p>После убийства её биологических родителей похитителями, она была спасена Эреном и стала жить с ним и его
+                родителями, Гришей и Карлой до падения стены Марии.
+
+            <p>Хотя первоначально Микаса и хотела лишь мирно жить с Эреном, она последовала за ним и вступила в 104-ый
+                кадетский корпус, где она стала лучшей из всех выпускников. Позже она вступила в Разведкорпус, чтобы
+                следить за Эреном и защищать его.
+        </div>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="../pics/AttackOnTitan/Levi1.jpg" style="width:100%">
+        <div class="caption_text">
+            <h3>Леви Аккерман</h3>
+            Капитан собственного отряда Разведкорпуса и широко известен как «Сильнейший боец человечества»
+            <img src="../pics/AttackOnTitan/Levi2.jpg" style="width: 100%">
+            <p>Леви — сын Кушель Аккерман, которая работала в борделе подземного города и неизвестного клиента.
+                Несмотря на своё пристрастие к чистоте, Леви очень обособлен и необщителен. Он редко проявляет эмоции,
+                производя на окружающих не самое лучшее впечатление. Его манера речи отличается прямолинейностью,
+                грубостью и обилием оскорблений, а его комментарии зачастую грубые или неуместные. Он не боится
+                провоцировать и унижать тех, кто противостоит ему или раздражает его. Его чувство юмора склонно к
+                пошлому, оскорбительному и мрачному. Всё это делает его очень сложным в общении для большинства людей.
+        </div>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="../pics/AttackOnTitan/Armin1.jpg" style="width:100%">
+        <div class="caption_text">
+            <h3>Армин Арлерт</h3>
+            Элитный солдат Разведкорпуса. Друг детства Эрена Йегера и Микасы Аккерман.
+            <img src="../pics/AttackOnTitan/Armin2.jpg" style="width: 100%">
+            <p>В детстве Армин носил длинную голубую кофту с одной пуговицей, светлую рубашку с воротником, длинные
+                брюки и туфли. После вступления в 104-й кадетский корпус, Армин стал носить стандартную форму кадета.
+
+                После вступления в Разведкорпус, Армин стал носить стандартную форму этой организации. Под коричневым
+                пиджаком он носит белую рубашку. Как и его товарищи, Армин поверх формы надевает длинный зелёный плащ во
+                время экспедиций за стены. Также, Армин носит длинные коричневые сапоги почти до колен.
+        </div>
+    </div>
+
+
+</div>
+<div class="button_right">
+    <a class="next" onclick="plusSlides(1)">></a>
+</div>
+
+
+</body>
+</html>
