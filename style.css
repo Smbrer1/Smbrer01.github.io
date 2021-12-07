@@ -7,7 +7,6 @@ html, body
 }
 .main_content{
     margin: 0 auto 0 auto;
-    overflow: auto;
     width: 50%;
     align-content: center;
     background-color: #F9F8F6;
@@ -21,17 +20,10 @@ html, body
     text-align: center;
     background-color:#F9F8F6;
     width:100%;
-    padding-bottom:10%; /* relative size and position on page  */
     float: left;
-    position:relative;  /* coord system stop */
+    position:relative;
 }
-#LOGO{
-    font-size: 150%;
-    margin-top: 5px;
-    margin-left: 25px;
-    position: relative;
-    float: left;
-}
+
 .anime_holder{
     display: inline-flex;
 }
